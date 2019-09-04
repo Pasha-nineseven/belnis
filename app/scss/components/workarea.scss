@@ -1,0 +1,217 @@
+.workarea{
+	line-height: 1.4;
+	h1{
+		margin: 0;
+		margin-bottom: 24px;
+		font-weight: 700;
+		font-size: 50px;
+		line-height: 1.1;
+	}
+	h2{
+		margin: 0;
+		margin-bottom: 24px;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 1.1;
+	}
+	h3{
+	    margin: 0;
+	    margin-bottom: 23px;
+	    font-weight: 500;
+	    font-size: 30px;
+	    line-height: 1.1;
+	}
+	h4{
+	    margin: 0;
+	    margin-bottom: 21px;
+	    font-weight: 500;
+	    font-size: 20px;
+	    line-height: 1.1;
+	}
+	h5{
+	    margin: 0;
+	    margin-bottom: 20px;
+	    font-weight: 700;
+	    font-size: 16px;
+	}
+	h6{
+	    margin: 0;
+	    margin-bottom: 18px;
+	    font-weight: 500;
+	    font-size: 16px;
+	}
+	p{
+		margin: 0;
+		margin-bottom: 25px;
+	}
+	video{
+		max-width: 100%;
+		height: auto;
+		object-fit: cover;
+		display: block;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"]{
+		width: 100%;
+		display: block;
+		vertical-align: middle;
+		color: #000;
+	}
+
+	ul{
+		margin: 0;
+		margin-bottom: 30px;
+		padding: 0;
+		li{
+			list-style-type: none;
+			padding-left: 33px;
+			position: relative;
+			margin-bottom: 25px;
+			&:before{
+				content: "";
+				position: absolute;
+				left: -1px;
+				top: 10px;
+				background: #FF0000;
+				width: 19px;
+				height: 4px;
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	ol{
+		margin: 0;
+		margin-bottom: 30px;
+		padding: 0;
+		counter-reset: list_1;
+		li{
+			list-style-type: none;
+			padding-left: 34px;
+			position: relative;
+			margin-bottom: 29px;
+			&:before{
+				counter-increment: list_1;
+				content: counters(list_1, ".");
+				position: absolute;
+				left: -2px;
+				top: 1px;
+				color: #FF0000;
+				font-size: 20px;
+				font-family: 'Montserrat', sans-serif;
+				line-height: 1;
+			}
+			&:after{
+				content: ".";
+				position: absolute;
+				    left: 17px;
+    			top: 4px;
+				color: #000;
+				font-size: 16px;
+				font-family: 'Montserrat', sans-serif;
+				line-height: 1;
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	table{
+		width: 100%;
+		min-width: 576px;
+		margin-bottom: 30px;
+		table-layout: fixed;
+	}
+	th{
+		text-align: left;
+		background: #fff;
+		padding: 12px 16px;
+		font-weight: 700;
+	}
+	td{
+    	border-bottom: 1px solid rgba(153,153,153,0.2);
+    	padding: 25px 16px 26px;
+	}
+
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"]{
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		color: #000;
+		border: 1px solid #fff;
+		border-bottom: 1px solid #999;
+		    padding: 9px 20px 10px 20px;
+		background: #fff;
+		position: relative;
+		z-index: 1;
+		font-size: 16px;
+		transition: all 0.3s ease;
+		&:focus,
+		&:hover{
+			border: 1px solid #999;
+			border-bottom: 1px solid #999;
+		}
+	}
+	textarea{
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		color: #022835;
+		border:0;
+		border: 1px solid #fff;
+		border-bottom: 1px solid #999;
+		padding: 8px 24px;
+		resize:vertical;
+		min-height: 100px;
+		transition: all 0.3s ease;
+		&:hover,
+		&:focus{
+			border: 1px solid #999;
+			border: 1px solid #999;
+		}
+	}
+
+	input[type="submit"]{
+		display: inline-block;
+		font-size: 20px;
+		background: $alt-color;
+		color: #fff;
+		padding: 10px 25px;
+		border:0;
+		transition:all 0.3s ease;
+		&+input[type="reset"]{
+			margin-left: 24px;
+		}
+		&:hover{
+			background: #000;
+		}
+		&:active{
+			background: #330000;
+		}
+	}
+	input[type="reset"]{
+		color: #000;
+		border: 1px solid #000;
+		padding: 9px 25px;
+		display: inline-block;
+		font-size: 20px;
+		background: transparent; 
+		transition:all 0.3s ease;
+		&:hover{
+			background: #000;
+			color: #fff;
+		}
+		&:active{
+			background: #330000;
+			color: #fff;
+		}
+	}
+}
