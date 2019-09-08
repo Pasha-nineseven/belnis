@@ -1,4 +1,261 @@
 .page-header{
-
+	width: 115px;
+	height: 100%;
+	min-height: 100vh;
+	position: fixed;
+	right: 0;
+	top: 0;
+	background: #000;
+	color: #fff;
+	z-index: 8;
+	font-size: 16px;
+	padding-bottom: 75px;
+	&:before{
+		content: "";
+		display: block;
+		width: 1px;
+		height: 100%;
+		background: rgba(255, 255, 255, 0.2);
+		position: absolute;
+		top: 0;
+		left: 50%;
+	}
 }
 
+.page-header__inner{
+	// padding: 0 32px;
+	display: flex;
+	flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+        align-items: center;
+}
+
+.logo{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 75px;
+	background: #fff url(../img/svg/logo.svg) center no-repeat;
+}
+
+
+
+.menu-btn{
+	padding: 14px 32px 41px 32px;
+	color: #fff;
+	font-weight: 500;
+	transition:all 0.3s ease;
+	margin-bottom: 31px;
+	    display: flex;
+    align-items: center;
+    justify-content: center;
+	&:hover{
+		background: rgba(153,153,153,0.2);
+		.burger-icon{
+			background: #FF0000;
+			&:before,
+			&:after{
+				background: #FF0000;
+			}
+		}
+	}
+	&.active{
+		.burger-icon {
+		    background-color: transparent;
+		    top: 36px;
+		    &:before{
+				transform: translateY(6px) rotate(45deg);
+				width: 48px;
+				opacity: 1;
+		    }
+		    &:after{
+				transform: translateY(-6px) rotate(-45deg);
+				width: 48px;
+		    }
+		}
+		.menu-title{
+			opacity: 0;
+		}
+	}
+}
+.burger-icon {
+    display: block;
+    position: absolute;
+    width: 48px;
+    height: 2px;
+    top: 43px;
+    left: 33px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+	&:before,
+	&:after{
+		display: block;
+		width: 24px;
+		height: 2px;
+		background-color: #fff;
+		transition:all 0.3s ease;
+		position: absolute;
+		content: "";
+	}
+	&:before{
+		top: -6px;
+		opacity: 0;
+	}
+	&:after{
+		top: 6px;
+	}
+}
+
+
+.menu-title{
+	transition:all 0.3s ease;
+}
+
+.menu-search{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	margin-bottom: 37px;
+}
+
+.menu-search__link{
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url(../img/svg/search.svg) center no-repeat;
+	transition:background 0.3s ease;
+	&:hover{
+		background: url(../img/svg/search-h.svg) center no-repeat;
+	}
+}
+
+.menu-phone{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	margin-bottom: 45px;
+}
+.menu-phone__link{
+	display: inline-block;
+	width: 14px;
+	height: 25px;
+	background: url(../img/svg/phone.svg) center no-repeat;
+	transition:background 0.3s ease;
+	&:hover{
+		background: url(../img/svg/phone-h.svg) center no-repeat;
+	}
+}
+
+
+.blind{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	
+}
+.blind__link{
+	display: inline-block;
+	width: 33px;
+	height: 12px;
+	background: url(../img/svg/blind.svg) center no-repeat;
+	transition:background 0.3s ease;
+	&:hover{
+		background: url(../img/svg/blind-h.svg) center no-repeat;
+	}
+}
+
+
+.menu-top{
+	padding-bottom: 39px;
+	background: #000;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+}
+
+.menu-bottom{
+	padding-top: 29px;
+	background: #000;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	&:before{
+		content: "";
+		display: block;
+		width: 1px;
+		height: 100%;
+		background: rgba(255, 255, 255, 0.2);
+		position: absolute;
+		top: 0;
+		left: 50%;
+	}
+}
+
+.menu-lang{
+	padding:32px 0;
+	background: #000; 
+	margin-bottom: 16px;
+	position: relative;
+	z-index: 2;
+}
+
+.menu-lang__item{
+	margin-bottom: 16px;
+	text-align: center;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+.menu-lang__link{
+	font-size: 16px;
+	color: rgba(255,255,255,0.4);
+	&.active{
+		color: #fff;
+		pointer-events:none;
+		font-weight: 500;
+	}
+	&:hover{
+		color: $alt-color;
+	}
+}
+
+.menu-socials{
+	    padding: 33px 0 30px;
+	background: #000;
+	position: relative;
+	z-index: 2;
+}
+
+.menu-socials__item{
+	margin-bottom: 25px;
+	text-align: center;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+.menu-socials__link{
+	display: inline-block;
+}
+
+.menu-socials__link--fb{
+	width: 11px;
+	height: 20px;
+	background: url(../img/svg/fb.svg) center no-repeat;
+	transition:background 0.3s ease;
+	&:hover{
+		background: url(../img/svg/fb-h.svg) center no-repeat;
+	}
+}
+.menu-socials__link--vk{
+	width: 25px;
+	height: 14px;
+	background: url(../img/svg/vk.svg) center no-repeat;
+	transition:background 0.3s ease;
+	&:hover{
+		background: url(../img/svg/vk-h.svg) center no-repeat;
+	}
+}
