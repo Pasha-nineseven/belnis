@@ -188,6 +188,7 @@ $('body').append(
 		#pages li { margin: 5px 0; } \
 	</style> \
 	<ol id="pages"> \
+        <li><a href="text.html">Text</a></li> \
 		<li><a href="contacts.html">Contacts</a></li> \
         <li><a href="profile.html">Profile</a></li> \
         <li><a href="services.html">Services</a></li> \
