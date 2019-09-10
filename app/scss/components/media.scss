@@ -9,7 +9,132 @@
 
 
 //MEDIA
-@media screen and (max-width: 1400px){
-
+@media screen and (max-width: 1750px){
+	.page-footer{
+		.container-fluid{
+			padding-left: 85px;
+		}
+	}
 }
 
+@media screen and (max-width: 1600px){
+	.page-footer{
+		.container-fluid{
+			padding-left: 170px;
+		}
+	}
+}
+
+@media screen and (max-width: 1500px){
+	.page-footer{
+		.container-fluid{
+			padding-left: 197px;
+		}
+	}
+}
+
+@media screen and (max-width: 1400px){
+	.application{
+		font-size: 14px;
+	}
+	.application__icon {
+	    width: 75px;
+	}
+	.application__txt {
+	    width: 162px;
+	    padding: 0 6px;
+	}
+	.page-content > .container-fluid,
+	.page-title > .container-fluid,
+	.breadcrumbs > .container-fluid {
+	    transform: translateX(0);
+	}
+}
+
+@media screen and (max-width: 1280px){
+	.container-fluid {
+	    max-width: 100%;
+	    padding-left: 121px;
+	    padding-right: 179px;
+	}
+	.page-footer .container-fluid{
+		padding-left: 270px;
+		padding-right: 150px;
+	}
+	.r-tabs-anchor {
+	    font-size: 16px;
+	    padding: 10px;
+	}
+	.workarea cite, .popup cite {
+	    font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 1023px){
+		
+	.page-title h1{
+
+	}
+	.workarea{
+
+	}
+	.application.active .application__txt {
+	    transform: translateX(-100%);
+	}
+	.application.active:hover .application__txt {
+	    transform: translateX(0);
+	}
+	.page-footer .container-fluid {
+	    padding-left: 121px;
+	}
+	.row{
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	.row > .col,
+    .row > [class*="col-"] {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .default-slider .slick-list {
+	    margin: 0 -10px;
+	}
+	.default-slider__item{
+		padding: 0 10px;
+	}
+	.img-items{
+		margin-right: -10px;
+	}
+	.img-items .img-item{
+		margin-right: 10px;
+	}
+}
+
+@media screen and (max-width: 767px){
+	body{
+		font-size: 14px;
+	}
+	.page-title h1{
+		font-size: 40px;
+	}
+	.workarea{
+		h1{
+			font-size: 40px;
+		}
+		h2{
+			font-size: 32px;
+		}
+		h3{
+			font-size: 24px;
+		}
+		h4{
+			font-size: 16px;
+		}
+		h5{
+			font-size: 14px;
+		}
+		h6{
+			font-size: 14px;
+		}
+	}
+}

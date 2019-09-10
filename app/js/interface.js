@@ -192,6 +192,7 @@ $('body').append(
         <li><a href="profile.html">Profile</a></li> \
         <li><a href="services.html">Services</a></li> \
         <li><a href="spisok.html">Spisok</a></li> \
+        <li><a href="shablon.html">Shablon</a></li> \
 		<li><a href="index.html">Index</a></li> \
 	</ol> \
 </div>');
