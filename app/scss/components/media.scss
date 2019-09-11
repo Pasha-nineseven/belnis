@@ -46,13 +46,20 @@
 	}
 	.page-content > .container-fluid,
 	.page-title > .container-fluid,
-	.breadcrumbs > .container-fluid {
+	.breadcrumbs > .container-fluid,
+	.events-top .container-fluid{
 	    transform: translateX(0);
+	}
+	.page-search{
+		.container-fluid{
+	    	transform: translateX(0);
+		}
 	}
 }
 
 @media screen and (max-width: 1280px){
-	.container-fluid {
+	.container-fluid,
+	.page-search .container-fluid{
 	    max-width: 100%;
 	    padding-left: 121px;
 	    padding-right: 179px;
@@ -83,17 +90,66 @@
 	.offers span {
 	    padding-right: 35px;
 	}
+	.events-top__time {
+	    margin-left: 65px;
+	}
+	.events-top__item:last-child {
+	    padding-left: 35px;
+	}
 }
 
 @media screen and (max-width: 1200px){
 	.item__img {
 	    height: 260px;
 	}
+	.events-top__num{
+		font-size: 30px;
+	}
+	.events-top__time {
+	    line-height: 1.14;
+	    margin-left: 40px;
+	    margin-top: -4px;
+	}
+	.events-top__time span{
+		margin-bottom: 2px;
+
+	}
 }
 
 @media screen and (max-width: 1100px){
 	.default-slider__img {
 	    height: 280px;
+	}
+	.events-top__num,
+	.events-top__time span{
+	    font-size: 20px;
+	}
+	.events-top__date span,
+	.events-top__time{
+		font-size: 16px;
+	}
+	.events-top__time {
+	    line-height: 1.18;
+	    margin-top: 0px;
+	}
+	.events-top__cost {
+	    font-size: 16px;
+	    padding-top: 0;
+	}
+	.events-top__btn .btn {
+	    padding: 9px 20px;
+	}
+	.events-top__btn{
+		padding-top: 0;
+	}
+	.events-top__item:first-child {
+	    padding-right: 15px;
+	}
+	.events-top__item:last-child {
+	    padding-left: 15px;
+	}
+	.events-top__info {
+	    padding-top: 40px;
 	}
 }
 
@@ -179,7 +235,8 @@
 	    background-size: 61px;
 	}
 	.container-fluid,
-	.page-footer .container-fluid{
+	.page-footer .container-fluid,
+	.page-search .container-fluid{
 		padding-right: 120px;
 	}
 	.accordeon__link {
@@ -231,6 +288,32 @@
 	.paging__prev, .paging__next{
 		min-width: 110px;
 		padding: 5px;
+	}
+	.events-aside{
+		margin-bottom: 30px;
+	}
+	.events-top .page-title h1 {
+	    font-size: 30px;
+	}
+	.events-top__info{
+		flex-wrap:wrap;
+	}
+	.events-top__item{
+		width: 100%;
+		margin-bottom: 20px;
+		    justify-content: flex-start;
+	}
+	.events-top__date span{
+		text-align: left;
+	}
+	.events-top__item:last-child {
+	    padding-left: 0;
+	}
+	.events-top__time{
+		margin-left: 65px;
+	}
+	.events-top__btn {
+	    margin-left: 26px;
 	}
 }
 

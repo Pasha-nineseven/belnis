@@ -144,20 +144,76 @@ $(document).ready(function() {
         $('.services-aside__link').removeClass('active');
         $(this).addClass('active');
         var anch = $(this).attr("href");
-            $('html,body').animate({scrollTop: $(anch).offset().top},'slow');
+        $('html,body').animate({scrollTop: $(anch).offset().top},'slow');
+    });
+
+    //TOP-SEARCH
+    $("body").on("click", ".js-menu-search__link", function(e){
+        e.preventDefault();
+        $('.page-search').fadeToggle(150);
+    });
+    $(document).click(function (e){ // событие клика по веб-документу
+        var div = $(".page-search__form,.js-menu-search__link"); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.page-search').fadeOut(150);
+        }
+    });
+
+
+
+    //other-slider
+    if ($('.other-slider').length>0) {
+        var $gallery = $('.other-slider');
+
+        $gallery.slick({
+            speed: 250,
+            swipe: true,
+            swipeToSlide: true,
+            touchThreshold: 10,
+            arrows:true,
+            dots:false,
+            useTransform:true,
+            accessibility: false,
+            infinite: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+    //      responsive: [
+            //     {
+            //       breakpoint: 850,
+            //       settings: {
+            //         slidesToShow: 5,
+            //         slidesToScroll: 1,
+            //       }
+            //     },
+            //     {
+            //       breakpoint: 700,
+            //       settings: {
+            //         slidesToShow: 4,
+            //         slidesToScroll: 1,
+            //       }
+            //     },
+            //     {
+            //       breakpoint: 600,
+            //       settings: {
+            //         slidesToShow: 3,
+            //         slidesToScroll: 1,
+            //       }
+            //     },
+            //     {
+            //       breakpoint: 500,
+            //       settings: {
+            //         slidesToShow: 2,
+            //         slidesToScroll: 1,
+            //       }
+            //     },
+            // ]
         });
+    };
 });
 
-// $(window).on("scroll", function() {
-//     var scrollHeight = $(document).height();
-//     var scrollPosition = $(window).height() + $(window).scrollTop();
-//     var ftrHeight = $('.page-footer').innerHeight();
-//     if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-//         console.log((scrollHeight - scrollPosition) / scrollHeight)
-//     }
-// });
 
-$(window).scroll(function() { 
+$(window).on("scroll", function() {
     var ftrHeight = $('.page-footer').innerHeight();
 
     //console.log($(window).scrollTop() + $(window).height());
@@ -194,6 +250,7 @@ $('body').append(
         <li><a href="services.html">Services</a></li> \
         <li><a href="spisok.html">Spisok</a></li> \
         <li><a href="shablon.html">Shablon</a></li> \
+        <li><a href="event.html">Event</a></li> \
 		<li><a href="index.html">Index</a></li> \
 	</ol> \
 </div>');
