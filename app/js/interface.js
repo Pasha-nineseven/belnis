@@ -1,13 +1,29 @@
 $(document).ready(function() {
 	flexibility(document.documentElement);
 	
-
+    //MENU
     $('body').on('click','.js-menu-btn', function(e){
         e.preventDefault();
         $(this).toggleClass('active');
-        $('.menu-mobile').slideToggle();
+        $('.page-header').toggleClass('active');
+        $('.menu-bg').fadeToggle();
+        $('body').toggleClass('fixed');
+    });
+    $('body').on('click','.js-menu-bg', function(e){
+        e.preventDefault();
+        $('.page-header').removeClass('active');
+        $('.menu-btn').removeClass('active');
+        $(this).fadeOut();
+        $('body').removeClass('fixed');
     });
 
+    //SUBMENU
+    $('body').on('click','.js-menu-link-sub', function(e){
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $(this).parents('.menu-item').find('.submenu').slideToggle();
+
+    });
 
 
 

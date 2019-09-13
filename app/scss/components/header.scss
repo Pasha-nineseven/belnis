@@ -10,15 +10,47 @@
 	z-index: 8;
 	font-size: 16px;
 	padding-bottom: 75px;
-	&:before{
-		content: "";
-		display: block;
-		width: 1px;
-		height: 100%;
-		background: rgba(255, 255, 255, 0.2);
-		position: absolute;
-		top: 0;
-		left: 50%;
+	&.active{
+		.menu-list{
+	    	left: -620px;
+	    }
+	    .menu-top,
+	    .menu-bottom,
+	    .menu-lang,
+	    .menu-socials,
+	    .page-header__inner:before{
+	    	background: #fff;
+	    }
+	    .menu-links{
+	    	opacity:0;
+	    	pointer-events:none;
+	    }
+	    .menu-socials__link--fb{
+	    	background: url(../img/svg/fb-black.svg) center no-repeat;
+	    	&:hover{
+	    		background: url(../img/svg/fb-h.svg) center no-repeat;
+	    	}
+	    }
+	    .menu-socials__link--vk{
+	    	background: url(../img/svg/vk-black.svg) center no-repeat;
+	    	&:hover{
+	    		background: url(../img/svg/vk-h.svg) center no-repeat;
+	    	}
+	    }
+	    .menu-lang__link {
+		    color: rgba(0,0,0,0.4);
+		    &:hover{
+				color: $alt-color;
+		    }
+		    &.active{
+		    	color: #000;
+		    	font-weight: 700;
+		    }
+		}
+		.menu-bottom:before {
+		    background: rgba(0, 0, 0, 0.2);
+		    top: 60px;
+		}
 	}
 }
 
@@ -28,7 +60,30 @@
 	flex-direction: column;
     height: 100%;
     justify-content: space-between;
-        align-items: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    &:before{
+    	content: "";
+    	display: block;
+    	width: 100%;
+    	height: 100%;
+    	position: absolute;
+    	width: 100%;
+    	height: 100%;
+    	background: #000;
+    }
+    &:after{
+		content: "";
+		display: block;
+		width: 1px;
+		height: 100%;
+		background: rgba(255, 255, 255, 0.2);
+		position: absolute;
+		top: 0;
+		left: 50%;
+		z-index: 4;
+	}
 }
 
 .logo{
@@ -38,6 +93,7 @@
 	width: 100%;
 	height: 75px;
 	background: #fff url(../img/svg/logo.svg) center no-repeat;
+	z-index: 10;
 }
 
 
@@ -51,6 +107,7 @@
 	    display: flex;
     align-items: center;
     justify-content: center;
+    background: #000; 
 	&:hover{
 		background: rgba(153,153,153,0.2);
 		.burger-icon{
@@ -172,7 +229,7 @@
 	padding-bottom: 39px;
 	background: #000;
 	position: relative;
-	z-index: 2;
+	z-index: 5;
 	width: 100%;
 }
 
@@ -180,7 +237,7 @@
 	padding-top: 29px;
 	background: #000;
 	position: relative;
-	z-index: 2;
+	z-index: 5;
 	width: 100%;
 	&:before{
 		content: "";
@@ -267,7 +324,7 @@
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	z-index: 4;
+	z-index: 12;
 	top: 0;
 	left: 0;
 	display: none;
@@ -339,3 +396,99 @@
 .page-search__input:focus::-moz-placeholder          {color: transparent}
 .page-search__input:focus:-moz-placeholder           {color: transparent}
 .page-search__input:focus:-ms-input-placeholder      {color: transparent}
+
+
+
+
+.menu-list{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 620px;
+	background: #fff;
+	padding: 74px 148px;
+	height: 100vh;
+	transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+	    max-height: 100vh;
+    overflow-y: auto;
+}
+
+
+.menu-list::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+ 
+.menu-list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 5px;
+}
+ 
+.menu-list::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #5A5A5A;
+}
+
+
+.menu-link{
+	font-size: 30px;
+	color: #000;
+	&:hover{
+		color: $alt-color;
+	}
+}
+
+.menu-item{
+	margin-bottom: 26px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+.menu-bg{
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.submenu__link{
+	display: block;
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: #000;
+	&:hover{
+		color: $alt-color;
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+.submenu{
+	padding: 13px 0 25px;
+	display: none;
+}
+
+.menu-item--sub{
+	position: relative;
+}
+
+.menu-link-sub{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url(../img/svg/plus.svg) center no-repeat;	
+	background-size: contain;
+	position: absolute;
+	    left: -39px;
+    top: 8px;
+    &.active{
+    	background: url(../img/svg/minus.svg) center no-repeat;	
+		background-size: contain;
+    }
+}
