@@ -1681,6 +1681,140 @@ border-top: 2px solid #F0F0F0;
 	}
 }
 
+
+.page-footer--index{
+	.container-fluid{
+		display: flex;
+		justify-content: flex-end;
+	}
+	.company{
+		width: 292px;
+		min-width: 292px;
+		margin-right: 32px;
+		margin-bottom: 0;
+	}
+}
+
+.page-footer__wrap{
+	display: flex;
+	flex-wrap:wrap;
+	width: 483px;
+}
+
+.page-footer__in{
+	display: flex;
+}
+
+.develop{
+    color: #999999;
+}
+
+.develop__link{
+	color: #999999;
+	&:hover{
+		color: $alt-color;
+	}	
+}
+
+
+.layout--index{
+	display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+    padding-top: 0;
+    background: url(../img/content/index-bg.jpg);
+    // background-image: url(../img/content/index-bg.png) center no-repeat;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    color: #fff;
+    .page-footer{
+    	background: transparent;
+    	    padding: 30px 0 10px;
+    }
+    .copyright{
+    	color: #fff;
+    }
+    .application__icon{
+    	width: 100px;
+    }
+    .application__txt {
+	    transform: translateX(0);
+	    margin-left: -25px;
+    	z-index: 2;
+	}
+	.menu-top{
+		background: #1c1c1c;
+	}
+	.menu-lang,
+	.menu-bottom,
+	.menu-socials{
+		background: #202020; 
+	}
+
+	.page-header{
+		background: transparent;
+		.page-header__inner{
+			background: #1c1c1c;
+
+			background: linear-gradient(0deg, #202020 0%, #1c1c1c 100%);
+		}
+		&.active{
+			.page-header__inner{
+				background: #fff;
+			}
+		}
+	}
+	.page-header__inner:before{
+		display: none;
+	}
+	.page-content {
+	    padding-bottom: 0;
+	    height: 100%;
+	    >.container-fluid{
+	    	max-width: 1246px;
+			height: 100%;
+	    }
+	}
+}
+
+.wrapper{
+	display: table-row;
+    height: 100%;
+}
+
+
+.list{
+	display: flex;
+	flex-wrap:wrap;
+	height: 100%;
+}
+
+.list__item{
+	width: 25%;
+	padding: 0 2px 2px 0;
+}
+
+.list__link{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.2;
+	background: rgba(0,0,0,0.3);
+	padding: 72px 20px;
+	transition: background 0.3s ease;
+	&:hover{
+		background: rgba(255,0,0,0.8);
+	}
+}
+
+
+
 @import "components/footer";
 
 
