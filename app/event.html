@@ -165,7 +165,7 @@
 								Бесплатно
 							</div>
 							<div class="events-top__btn">
-								<a href="#" class="btn">Регистрация</a>
+								<a href="#form-reg" class="btn js-popup-inline">Регистрация</a>
 							</div>
 						</div>
 					</div>
@@ -189,7 +189,7 @@
 								<a href="#event6" class="services-aside__link js-scroll-link">Другие мероприятия</a>
 							</div>
 							<div class="t-center">
-								<a href="#" class="btn">Регистрация</a>
+								<a href="#form-reg" class="btn js-popup-inline">Регистрация</a>
 							</div>
 						</aside>
 						<div class="col-lg-8 order-lg-1 events">
@@ -437,7 +437,7 @@
 				</div>
 			</main>
 		</div><!-- END LAYOUT-->
-		<a href="#form" class="application js-popup-inline">
+		<a href="#form-app" class="application js-popup-inline">
 			<div class="application__icon"></div>
 			<div class="application__txt">
 				Оставить заявку на выполнение работ
@@ -486,14 +486,10 @@
 
 
 		<!-- POPUP -->
-		<div id="form" class="dnone">
+		<div id="form-app" class="dnone">
 			<div class="popup popup--form">
 				<form action="#" method="post">
-					<h3>Регистрация на мероприятие</h3>
-					<div class="input-wrap input-wrap--necessary">
-						<div class="input-label">Название мероприятия</div>
-						<input type="text">
-					</div>
+					<h3>Заявка</h3>
 					<div class="input-wrap input-wrap--necessary">
 						<div class="input-label">Ваши Ф.И.О.</div>
 						<input type="text">
@@ -506,16 +502,39 @@
 						<div class="input-label">Контактный номер телефона</div>
 						<input type="text">
 					</div>
+					<div class="input-wrap input-wrap--necessary">
+						<div class="input-label">Комментарий</div>
+						<textarea></textarea>
+					</div>
+					
 					<div class="input-wrap">
-						<div class="input-label">Название организации</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="agree2" name="checkbox" checked>
+							<label for="agree2">Я согласен с <a href="#">пользовательским соглашением</a></label>
+						</div>
+					</div>
+
+					<div class="page-form__btn">
+						<input type="submit" value="Оставить заявку">
+						<input type="reset" value="Отмена">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="form-reg" class="dnone">
+			<div class="popup popup--form">
+				<form action="#" method="post">
+					<h3>Регистрация</h3>
+					<div class="input-wrap input-wrap--necessary">
+						<div class="input-label">Ваши Ф.И.О.</div>
 						<input type="text">
 					</div>
 					<div class="input-wrap">
-						<div class="input-label">Адрес организации</div>
+						<div class="input-label">Электронная почта</div>
 						<input type="text">
 					</div>
-					<div class="input-wrap">
-						<div class="input-label">Контактное лицо</div>
+					<div class="input-wrap input-wrap--phone">
+						<div class="input-label">Контактный номер телефона</div>
 						<input type="text">
 					</div>
 					<div class="input-wrap input-wrap--necessary">
@@ -525,21 +544,13 @@
 					
 					<div class="input-wrap">
 						<div class="checkbox-item">
-							<input type="checkbox" id="agree1" name="checkbox" checked>
-							<label for="agree1">Я согласен с тем, что фото и видеоматериалы, сделанные в ходе мероприятия, с моим изображением могут быть использованы организаторами мероприятия по их усмотрению, в том числе в информационных или рекламных целях</label>
-						</div>
-						<div class="checkbox-item">
 							<input type="checkbox" id="agree2" name="checkbox" checked>
 							<label for="agree2">Я согласен с <a href="#">пользовательским соглашением</a></label>
-						</div>
-						<div class="checkbox-item">
-							<input type="checkbox" id="agree3" name="checkbox" checked>
-							<label for="agree3">Я хочу получать информацию о мероприятиях, проводимых РУП "Институт БелНИИС</label>
 						</div>
 					</div>
 
 					<div class="page-form__btn">
-						<input type="submit" value="Оставить заявку">
+						<input type="submit" value="Зарегистрироваться">
 						<input type="reset" value="Отмена">
 					</div>
 				</form>

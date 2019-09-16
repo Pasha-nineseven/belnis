@@ -367,6 +367,7 @@ a.breadcrumbs__item{
 	   	opacity: 0;
 		visibility: hidden;
 		position: absolute;
+		width: 100%;
 	}
 }
 
@@ -1831,10 +1832,8 @@ border-top: 2px solid #F0F0F0;
 }
 
 .list-slider--events{
-	.list__inner{
 		background: url(../img/content/events-slider-bg.jpg) center no-repeat;
 		background-size: cover;
-		position: relative;
 		&:before{
 			content: "";
 			display: block;
@@ -1847,6 +1846,9 @@ border-top: 2px solid #F0F0F0;
 			background: linear-gradient(139.42deg, rgba(0, 0, 0, 0.8) 0%, #000000 100%);
 			opacity: 0.8;
 		}
+	.list__inner{
+		background: transparent;
+		position: relative;
 	}
 }
 
@@ -1969,6 +1971,27 @@ border-top: 2px solid #F0F0F0;
 	}
 }
 
+.list__mobile-bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: none;
+	&:before{
+		content: "";
+		background: #000000;
+		opacity: 0.6;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
 
 body.fixed{
 	overflow: hidden;
