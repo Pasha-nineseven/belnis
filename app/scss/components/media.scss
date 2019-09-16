@@ -55,7 +55,13 @@
 	    	transform: translateX(0);
 		}
 	}
+	.layout--index .page-content > .container-fluid {
+	    margin-left: 0;
+	    padding-right: 134px;
+	    padding-left: 20px;
+	}
 }
+
 
 @media screen and (max-width: 1280px){
 	.container-fluid,
@@ -96,6 +102,19 @@
 	.events-top__item:last-child {
 	    padding-left: 35px;
 	}
+	.list__inner{
+		padding: 20px 15px;
+	}
+	.list-slider__cat,
+	.list-slider__add{
+		font-size: 14px;
+	}
+	.list__link{
+		font-size: 16px;
+	}
+	.list-slider .list__inner {
+	    padding: 20px 15px;
+	}
 }
 
 @media screen and (max-width: 1200px){
@@ -113,6 +132,15 @@
 	.events-top__time span{
 		margin-bottom: 2px;
 
+	}
+	.list-slider__cat{
+		width: 100%;
+	}
+	.list-slider__top{
+		flex-wrap:wrap;
+	}
+	.list-slider__add{
+		margin-top: 5px;
 	}
 }
 
@@ -179,10 +207,12 @@
       padding-right: 10px;
       padding-left: 10px;
     }
-    .default-slider .slick-list {
+    .default-slider .slick-list,
+    .other-slider .slick-list{
 	    margin: 0 -10px;
 	}
-	.default-slider__item{
+	.default-slider__item,
+	.other-slider__item{
 		padding: 0 10px;
 	}
 	.img-items,
@@ -195,6 +225,10 @@
 	}
 	.img-items .img-item{
 		margin-right: 20px;
+	}
+	.layout--index .application__txt,
+	.layout--index .application.active .application__txt{
+		transform:none;
 	}
 }
 
@@ -315,6 +349,88 @@
 	.events-top__btn {
 	    margin-left: 26px;
 	}
+	.menu-btn.active .burger-icon {
+	    top: 31px;
+	}
+	.menu-list {
+	    width: 380px;
+	    padding: 74px 60px;
+	}
+	.menu-link {
+	    font-size: 20px;
+	}
+	.page-header.active .menu-list {
+	    left: -380px;
+	}
+	.submenu__link {
+	    margin-bottom: 10px;
+	    font-size: 16px;
+	    &:last-child{
+	    	margin-bottom: 0;
+	    }
+	}
+	.submenu {
+	    padding: 10px 0 0;
+	}
+	.menu-link-sub{
+		top: 0;
+	}
+	.page-form{
+		padding: 20px;
+	}
+	.download-item{
+		font-size: 16px;
+	}
+	.workarea cite,
+	.popup cite,
+	.news-date,
+	.education__title,
+	.workarea input[type="submit"],
+	.popup input[type="submit"],
+	.workarea input[type="submit"] + input[type="reset"],
+	.popup input[type="submit"] + input[type="reset"]{
+	    font-size: 16px;
+	}
+	.workarea td, .popup td {
+	    padding: 15px;
+	}
+	.layout--index .page-content > .container-fluid {
+	    padding-right: 94px;
+	}
+}
+
+@media screen and (max-width: 950px){
+	.popup--form {
+	    width: 100%;
+	    padding: 33px 20px;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.list__link {
+	    font-size: 14px;
+	}
+	.layout--index .page-footer{
+		    padding-left: 255px;
+    	padding-right: 95px;
+    	.container-fluid{
+    		padding: 0;
+    	}
+	}
+	.page-footer--index .company {
+	    width: 200px;
+	    min-width: 200px;
+	}
+	.layout--index .copyright{
+		margin-left: 0;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	.r-tabs .r-tabs-accordion-title {
+	    margin-bottom: 2px;
+	}
 }
 
 @media screen and (max-width: 767px){
@@ -351,5 +467,185 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+	}
+
+	.page-title h1{
+		font-size: 30px;
+	}
+	.workarea{
+		h1{
+			font-size: 30px;
+		}
+		h2{
+			font-size: 26px;
+		}
+		h3{
+			font-size: 22px;
+		}
+		h4{
+			font-size: 16px;
+		}
+		h5{
+			font-size: 14px;
+		}
+		h6{
+			font-size: 14px;
+		}
+	}
+	.workarea input[type="text"],
+	.workarea input[type="email"],
+	.workarea input[type="password"],
+	.popup input[type="text"],
+	.popup input[type="email"],
+	.popup input[type="password"],
+	.jq-selectbox__select{
+		font-size: 14px;
+	}
+	.workarea input[type="radio"]:not(:checked) + label,
+	.workarea input[type="radio"]:checked + label,
+	.popup input[type="radio"]:not(:checked) + label,
+	.popup input[type="radio"]:checked + label{
+		font-size: 14px;
+	}
+	.resp-tabs+.default-slider{
+		margin-top: 90px;
+	}
+	.layout--index .page-footer {
+	    padding-left: 0;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.layout{
+		padding-top: 90px;
+	}
+	.page-title h1,
+	.breadcrumbs{
+	    margin-bottom: 15px;
+	}
+	.workarea h1, .popup h1,
+	.workarea h2, .popup h2,
+	.workarea h3, .popup h3,
+	.workarea h4, .popup h4{
+		margin-bottom: 20px;
+	}
+	.page-header {
+	    width: 100%;
+	    height: 58px;
+	    padding: 0 76px 0 0;
+	    min-height: auto;
+	}
+	.logo {
+	    bottom: auto;
+	    left: auto;
+	    right: 0;
+	    top: 0;
+	    width: 76px;
+	    height: 58px;
+	    background-size: 68px;
+	}
+	.menu-bottom,
+	.page-header__inner:after{
+		display: none;
+	}
+	.page-header__inner {
+	    flex-direction: row;
+	}
+	.menu-links{
+		flex: 1;
+    	display: flex;
+    	justify-content: space-between;
+	    padding: 0 20px;
+	    align-items: center;
+	}
+	.menu-top{
+		display: flex;
+		padding-bottom: 0;
+		height: 100%;
+	}
+	.menu-btn{
+		padding: 15px 12px 29px 12px;
+	    margin: 0;
+	    position: relative;
+	}
+	.burger-icon{
+		top: 36px;
+	}
+	.page-header.active .logo{
+		display: none;
+	}
+	.menu-btn.active .burger-icon {
+	    top: 28px;
+	}
+	.menu-search,
+	.menu-phone{
+		margin-bottom: 0;
+	}
+	.menu-list {
+	    width: 100%;
+	    padding: 80px 20px 60px 51px;
+	    left: 0;
+	    top: -100vh;
+	    transition: none;
+	}
+
+	.page-header.active .menu-list {
+	    left: 0;
+	    top: 0;
+	}
+	.container-fluid, .page-footer .container-fluid,
+	.page-search .container-fluid {
+	    padding-right: 10px;
+	    padding-left: 10px;
+	}
+	.workarea input[type="checkbox"]:not(:checked) + label,
+	.workarea input[type="checkbox"]:checked + label,
+	.popup input[type="checkbox"]:not(:checked) + label,
+	.popup input[type="checkbox"]:checked + label {
+	    line-height: 17px;
+	    font-size: 14px;
+	}
+	.workarea input[type="submit"],
+	.popup input[type="submit"]{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.workarea input[type="submit"] + input[type="reset"],
+	.popup input[type="submit"] + input[type="reset"] {
+	    margin-left: 0;
+	}
+	.page-search__form {
+	    width: calc(100vw - 20px);
+	}
+	.page-search__input {
+	    padding: 20px 10px 20px 45px;
+	}
+	.layout--event {
+	    padding-top: 58px;
+	}
+	.event-title{
+		font-size: 16px;
+	}
+	body{
+		overflow-x: hidden; 
+	}
+	.subscribe-wrap{
+		flex-wrap:wrap;
+	}
+	.subscribe input[type="submit"]{
+		width: 100%;
+		margin-top: 20px;
+	}
+	.copyright{
+		margin-left: 0;
+	}
+	.page-footer {
+	    padding: 25px 0 90px;
+	}
+	.page-content{
+		padding-bottom: 30px;
+	}
+	.btn{
+		font-size: 16px;
 	}
 }
