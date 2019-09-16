@@ -8,15 +8,6 @@
 @import "components/body";
 
 
-
-// a[href^="http://maps.google.com/maps"]{display:none !important}
-// a[href^="https://maps.google.com/maps"]{display:none !important}
-// .gmnoprint a, .gmnoprint span, .gm-style-cc {
-//     display:none;
-// }
-// .gmnoprint div {
-//     background:none !important;
-// }
 ymaps[class$="-copyright"] {
 	display: none;
 }
@@ -26,12 +17,8 @@ ymaps[class$="-copyright"] {
 @import "components/workarea";
 
 .layout{
-	// display: table;
-	// table-layout: fixed;
- //  	height: 100%;
- //  	width: 100%;
   	flex: 1 0 auto;
-  	    padding-top: 50px;
+  	padding-top: 50px;
 }
 
 .btn{
@@ -54,13 +41,8 @@ ymaps[class$="-copyright"] {
 	text-align: center;
 }
 
-// .wrapper{
-// 	display: table-row;
-// 	height: 100%;
-// }
 .container-fluid{
 	max-width: 1060px;
-	// padding: 0;
 	position: relative;
 	width: 100%;
 }
@@ -84,14 +66,12 @@ ymaps[class$="-copyright"] {
 .breadcrumbs{
 	>.container-fluid{
     	transform: translateX(-59px);
-    	//transform: translateX(-115px);
 	}
 }
 
 .events-top{
 	.container-fluid{
     	transform: translateX(-59px);
-    	//transform: translateX(-115px);
 	}
 }
 
@@ -99,7 +79,6 @@ ymaps[class$="-copyright"] {
 	.container-fluid{
     	transform: translateX(-59px);
     	padding: 0 20px 0 5px;
-    	//transform: translateX(-115px);
 	}
 }
 
@@ -1746,19 +1725,22 @@ border-top: 2px solid #F0F0F0;
     	z-index: 2;
 	}
 	.menu-top{
-		background: #1c1c1c;
+		background: linear-gradient(0deg, #1d1d1d 0%, #1b1b1b 100%);
 	}
-	.menu-lang,
-	.menu-bottom,
+	.menu-bottom{
+		//background: linear-gradient(0deg, #222222 0%,#222222 50%, #1f1f1f 100%);
+		//background: #1f1f1f;
+		background: linear-gradient(180deg, #1e1e1e 0%, #222222 50%, #1f1f1f 72%);
+	}
+	
 	.menu-socials{
-		background: #202020; 
+		//background: transparent; 
+		background: linear-gradient(0deg, #222222 0%, #202020 100%);
 	}
 
 	.page-header{
 		background: transparent;
 		.page-header__inner{
-			background: #1c1c1c;
-
 			background: linear-gradient(0deg, #202020 0%, #1c1c1c 100%);
 		}
 		&.active{
@@ -1774,9 +1756,13 @@ border-top: 2px solid #F0F0F0;
 	    padding-bottom: 0;
 	    height: 100%;
 	    >.container-fluid{
-	    	max-width: 1246px;
+	    	max-width: 1276px;
 			height: 100%;
 	    }
+	}
+	.menu-lang{
+		//background: transparent;
+		background: linear-gradient(0deg, #202020 0%, #1f1f1f 100%);
 	}
 }
 
@@ -1790,6 +1776,7 @@ border-top: 2px solid #F0F0F0;
 	display: flex;
 	flex-wrap:wrap;
 	height: 100%;
+	padding: 37px 0;
 }
 
 .list__item{
@@ -1806,13 +1793,120 @@ border-top: 2px solid #F0F0F0;
 	font-weight: 500;
 	line-height: 1.2;
 	background: rgba(0,0,0,0.3);
-	padding: 72px 20px;
+	padding: 72px 26px;
 	transition: background 0.3s ease;
 	&:hover{
 		background: rgba(255,0,0,0.8);
 	}
 }
 
+.list-slider--news{
+	.list-slider__item{
+		background: linear-gradient(139.42deg, rgba(9, 113, 179, 0) 0%, rgba(9, 113, 179, 0.6) 100%);
+	}
+}
+
+.list-slider--events{
+	.list-slider__item{
+		background: url(../img/content/events-slider-bg.jpg) center no-repeat;
+		background-size: cover;
+		position: relative;
+		&:before{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			background: linear-gradient(139.42deg, rgba(0, 0, 0, 0.8) 0%, #000000 100%);
+			opacity: 0.8;
+		}
+	}
+}
+
+.list-slider{
+	height: 100%;
+	display: none;
+	&.slick-initialized{
+		display: block;
+	}
+	.list__link{
+		background: transparent;
+		position: relative;
+		z-index: 2;
+		padding: 24px;
+	}
+	.list-slider__item{
+		height: 100%;
+	}
+	.slick-dots{
+		margin-bottom: 0;
+		display: flex;
+		position: absolute;
+		bottom: 10px;
+		left: 24px;
+		li{
+			margin: 0 8px 0 0;
+			padding: 0;
+			&:last-child{
+				margin-right: 0;
+			}
+			&:before{
+				display: none;
+			}
+			&.slick-active{
+				button{
+					opacity: 1;
+				}
+			}
+			button{
+				width: 8px;
+				height: 8px;
+				background: #FFFFFF;
+				opacity: 0.4;
+				border: 0;
+				padding: 0;
+				display: inline-block;
+				transition:all 0.3s ease;
+				border-radius: 50%;
+				text-indent:-9999em;
+				&:hover{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.slick-list,
+	.slick-track{
+		height: 100%;
+	}
+}
+
+.list-slider__top{
+	padding: 23px 24px 0px 24px;
+	display: flex;
+	justify-content:space-between;
+	position: relative;
+	z-index: 2;
+	align-items:center;
+}
+
+.list-slider__cat{
+	color: #FFFFFF;
+	opacity: 0.4;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.list-slider__add{
+    color: #fff;
+    background: #000;
+    padding: 5px 8px;
+    font-weight: 500;
+    line-height: 1;
+}
 
 
 @import "components/footer";

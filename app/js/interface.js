@@ -226,6 +226,56 @@ $(document).ready(function() {
             // ]
         });
     };
+
+
+
+    //list-slider
+    if ($('.list-slider').length>0) {
+        var $gallery = $('.list-slider');
+
+        $gallery.slick({
+            speed: 250,
+            swipe: true,
+            swipeToSlide: true,
+            touchThreshold: 10,
+            arrows:false,
+            dots:true,
+            useTransform:true,
+            accessibility: false,
+            infinite: false,
+            fade:true
+    //      responsive: [
+            //     {
+            //       breakpoint: 850,
+            //       settings: {
+            //         slidesToShow: 5,
+            //         slidesToScroll: 1,
+            //       }
+            //     },
+            //     {
+            //       breakpoint: 700,
+            //       settings: {
+            //         slidesToShow: 4,
+            //         slidesToScroll: 1,
+            //       }
+            //     },
+            //     {
+            //       breakpoint: 600,
+            //       settings: {
+            //         slidesToShow: 3,
+            //         slidesToScroll: 1,
+            //       }
+            //     },
+            //     {
+            //       breakpoint: 500,
+            //       settings: {
+            //         slidesToShow: 2,
+            //         slidesToScroll: 1,
+            //       }
+            //     },
+            // ]
+        });
+    };
 });
 
 
