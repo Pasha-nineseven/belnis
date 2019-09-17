@@ -66,6 +66,11 @@ $(document).ready(function() {
         ],
     });
 
+    $("body").on("click", ".js-btn-reset", function(e){
+        e.preventDefault();
+        parent.jQuery.fancybox.getInstance().close();
+    });
+
 
     //FS
     if ($('.fs').length>0) {

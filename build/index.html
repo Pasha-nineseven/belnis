@@ -70,15 +70,15 @@
 						</a>
 						<div class="submenu">
 							<a href="#" class="submenu__link">Об институте</a>
-							<a href="#" class="submenu__link">Реквизиты</a>
+							<span class="submenu__link active">Реквизиты</span>
 							<a href="#" class="submenu__link">Вакансии</a>
 							<a href="#" class="submenu__link">Лицензии и сертификаты</a>
 						</div>
 					</div>
 					<div class="menu-item">
-						<a href="#" class="menu-link">
+						<span class="menu-link active">
 							Мероприятия
-						</a>
+						</span>
 					</div>
 					<div class="menu-item menu-item--sub">
 						<a href="#" class="menu-link-sub js-menu-link-sub"></a>
@@ -402,14 +402,15 @@
 					
 					<div class="input-wrap">
 						<div class="checkbox-item">
-							<input type="checkbox" id="agree2" name="checkbox" checked>
+							<input type="checkbox" id="agree2" name="checkbox">
 							<label for="agree2">Я согласен с <a href="#">пользовательским соглашением</a></label>
 						</div>
 					</div>
 
 					<div class="page-form__btn">
 						<input type="submit" value="Оставить заявку">
-						<input type="reset" value="Отмена">
+						<!-- <input type="reset" value="Отмена"> -->
+						<a href="#" class="btn-reset js-btn-reset">Отмена</a>
 					</div>
 				</form>
 			</div>

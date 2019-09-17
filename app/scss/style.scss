@@ -1672,10 +1672,10 @@ border-top: 2px solid #F0F0F0;
 		min-width: 292px;
 		margin-right: 32px;
 		margin-bottom: 0;
-		color: rgba(255,255,255,0.4);
+		color: rgba(255,255,255,0.6);
 	}
 	.develop{
-		color: rgba(255,255,255,0.4);
+		color: rgba(255,255,255,0.6);
 	}
 }
 
@@ -1923,9 +1923,11 @@ border-top: 2px solid #F0F0F0;
 
 .list-slider__cat{
 	color: #FFFFFF;
-	opacity: 0.4;
+	opacity: 0.6;
 	font-size: 16px;
 	font-weight: 500;
+	backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .list-slider__add{
@@ -1934,6 +1936,8 @@ border-top: 2px solid #F0F0F0;
     padding: 5px 8px;
     font-weight: 500;
     line-height: 1;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 
@@ -1950,10 +1954,9 @@ border-top: 2px solid #F0F0F0;
 }
 
 .list__title{
-	transform: translateZ(20px);
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
+	//transform: perspective(-1px) translateZ(20px);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .list__date{
@@ -2072,6 +2075,24 @@ body.fixed{
 	width: 20px;
 	height: 11px;
 	background: url(../img/svg/vk-menu.svg) no-repeat;
+}
+
+.btn-reset{
+	color: #000;
+	border: 1px solid #000;
+	padding: 9px 25px;
+	display: inline-block;
+	font-size: 20px;
+	background: transparent; 
+	transition:all 0.3s ease;
+	&:hover{
+		background: #000;
+		color: #fff;
+	}
+	&:active{
+		background: #330000;
+		color: #fff;
+	}
 }
 
 @import "components/footer";

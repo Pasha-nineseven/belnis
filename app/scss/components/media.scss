@@ -443,7 +443,8 @@
 	.workarea input[type="submit"],
 	.popup input[type="submit"],
 	.workarea input[type="submit"] + input[type="reset"],
-	.popup input[type="submit"] + input[type="reset"]{
+	.popup input[type="submit"] + input[type="reset"],
+	.btn-reset{
 	    font-size: 16px;
 	}
 	.workarea td, .popup td {
@@ -724,7 +725,8 @@
 		margin-bottom: 20px;
 	}
 	.workarea input[type="submit"] + input[type="reset"],
-	.popup input[type="submit"] + input[type="reset"] {
+	.popup input[type="submit"] + input[type="reset"],
+	.popup input[type="submit"] + .btn-reset{
 	    margin-left: 0;
 	}
 	.page-search__form {
