@@ -1997,6 +1997,83 @@ body.fixed{
 	overflow: hidden;
 }
 
+
+.menu-list__bottom{
+    position: fixed;
+    bottom: 0;
+	left: 0;
+	background: #fff;
+	width: 100%;
+	padding: 15px;
+	color: #000;
+	display: flex;
+	align-items:center;
+	justify-content:space-between;
+	display: none;
+	&:before{
+	    content: "";
+	    display: block;
+	    width: calc(100% - 40px);
+	    height: 1px;
+	    background: rgba(0, 0, 0, 0.2);
+	    position: absolute;
+	    left: 20px;
+	    top: 50%;
+	}
+}
+
+.menu-list-lang{
+	display: flex;
+	align-items:center;
+	
+	background: #fff;
+	padding-right: 15px;
+	position: relative;
+	z-index: 2;
+	
+}
+.menu-list-lang__link{
+	margin-right: 16px;
+	font-size: 14px;
+	color: rgba(0,0,0,0.4);
+	&:last-child{
+		margin-right: 0;
+	}
+	&.active{
+		color: #000;
+		font-weight: 500;
+	}
+}
+
+.menu-list-socials{
+	display: flex;
+	align-items:center;
+	background: #fff;
+	padding-left: 15px;
+	position: relative;
+	z-index: 2;
+}
+
+.menu-list-socials__link{
+	display: inline-block;
+	margin-right: 20px;
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.menu-list-socials__link--fb{
+	width: 10px;
+	height: 17px;
+	background: url(../img/svg/fb-menu.svg) no-repeat;
+}
+
+.menu-list-socials__link--vk{
+	width: 20px;
+	height: 11px;
+	background: url(../img/svg/vk-menu.svg) no-repeat;
+}
+
 @import "components/footer";
 
 

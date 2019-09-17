@@ -20,6 +20,7 @@
 	    .menu-socials,
 	    .page-header__inner:before{
 	    	background: #fff;
+	    	left: 0;
 	    }
 	    .menu-links{
 	    	opacity:0;
@@ -383,6 +384,34 @@
 	}
 }
 
+
+.page-search__close{
+	display: inline-block;
+	position: absolute;
+	color: #fff;
+	font-size: 14px;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    display: none;
+    
+    span{
+    	padding-left: 40px;
+    	position: relative;
+    	&:before{
+    		content: "";
+    		display: inline-block;
+		    width: 34px;
+		    height: 35px;
+		    border: 0;
+    		background: url(../img/svg/reset.svg) center no-repeat;
+    		position: absolute;
+    		left: 0;
+    		top: 50%;
+    		 transform: translateY(-50%);
+    	}
+    }
+}
 
 
 .page-search__input::-webkit-input-placeholder {color:#fff;transition:all 0.3s ease;}
