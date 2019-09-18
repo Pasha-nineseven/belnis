@@ -6686,6 +6686,10 @@ body.fixed {
   .offers {
     text-align: center; } }
 
+@media (max-width: 576px) {
+  .txt-item .col-sm-4 {
+    margin-bottom: 15px; } }
+
 @media screen and (max-width: 500px) {
   .list__item {
     width: 100%;

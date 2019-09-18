@@ -835,6 +835,15 @@
 	}
 }
 
+@media (max-width: 576px){
+	.txt-item{
+		.col-sm-4{
+			margin-bottom: 15px;
+		}
+	}
+}
+
+
 @media screen and (max-width: 500px){
 	.list__item {
 	    width: 100%;
@@ -858,3 +867,4 @@
 	    padding: 14px 15px;
 	}
 }
+
