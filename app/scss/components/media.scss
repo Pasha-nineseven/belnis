@@ -36,6 +36,26 @@
 }
 
 //MEDIA
+
+@media screen and (max-height: 720px){
+	.menu-btn{
+		margin-bottom: 15px;
+	}
+	.menu-search,
+	.menu-phone{
+		margin-bottom: 20px;
+	}
+	.menu-top{
+		padding-bottom: 20px;
+	}
+	.menu-lang {
+	    padding: 20px 0;
+	}
+	.menu-socials {
+	    padding: 20px 0 20px;
+	}
+}
+
 @media screen and (max-width: 1750px){
 	.page-footer{
 		.container-fluid{
@@ -462,6 +482,10 @@
 	.workarea ol li:after, .popup ol li:after{
 		top: 0;
 	}
+	.profile-img__item{
+		position: static;
+	    padding-right: 0;
+	}
 }
 
 @media screen and (max-width: 950px){
@@ -544,17 +568,17 @@
 	}
 
 	.page-title h1{
-		font-size: 30px;
+		font-size: 22px;
 	}
 	.workarea{
 		h1{
-			font-size: 30px;
+			font-size: 22px;
 		}
 		h2{
-			font-size: 26px;
+			font-size: 20px;
 		}
 		h3{
-			font-size: 22px;
+			font-size: 20px;
 		}
 		h4{
 			font-size: 16px;
@@ -565,6 +589,15 @@
 		h6{
 			font-size: 14px;
 		}
+	}
+	.events-top .page-title h1 {
+	    font-size: 22px;
+	}
+	.events-top {
+	    padding: 25px 0 15px;
+	}
+	.events-top__info {
+	    padding-top: 10px;
 	}
 	.workarea input[type="text"],
 	.workarea input[type="email"],
@@ -801,7 +834,6 @@
 		text-align: center;
 	}
 }
-
 
 @media screen and (max-width: 500px){
 	.list__item {
