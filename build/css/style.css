@@ -4970,7 +4970,12 @@ a.paging__item {
 .contacts-title {
   font-size: 20px;
   margin-bottom: 13px;
-  line-height: 1.2; }
+  line-height: 1.2;
+  color: #000;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease; }
+  .contacts-title:hover {
+    color: #FF0000; }
 
 .contacts-position {
   font-size: 12px;
