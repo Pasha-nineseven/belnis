@@ -246,6 +246,12 @@ $(document).ready(function() {
     $("body").on("mouseleave",".list", function () {
         $('.layout--index').removeAttr("style")
     });
+
+    //COOKIES-CLOSE
+    $("body").on("click", ".js-cookies__close", function(e){
+        e.preventDefault();
+        $(this).parents('.cookies').remove();
+    });
 });
 
 
